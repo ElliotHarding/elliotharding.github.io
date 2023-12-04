@@ -1,0 +1,40 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menuItem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px
+}
+
+/*
+.peak {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.peakLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+.peakLink {
+  display: flex;
+}
+
+.iconImage {.
+	width: 30px;
+	height: 30px;
+}
