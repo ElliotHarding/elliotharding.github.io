@@ -10,17 +10,40 @@
 }
 
 .menu {
-	/*display: flex;*/
-	position: relative;
-	justify-content: center;
-	align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.menuItems {
+  position: absolute;
+  bottom: 50%;
+  transform: translate(0, 50%);
+  left: 16px;
+  color: white;
+  display: flex;
+  font-family: 'Times New Roman', serif;
 }
 
 .menuItem {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 10px
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  font-size: large;
+}
+
+.question {
+  position: absolute;
+  /*top: 10px;
+  left: 10px;*/
+  bottom: 10px;
+  right: 16px;
+  /*bottom: 70%;
+  transform: translate(0, 50%);*/
+  color: white;
+  font-size: large;
+  font-family: 'Times New Roman', serif;
 }
 
 .iconsContainer

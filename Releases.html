@@ -1,13 +1,32 @@
 <link rel="icon" href="link.png">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css.css">
 <title>Elliot Harding-🌐 </title>
-<b>Why is it that this question is so rare?</b> 
-</br>
-</br>
-<a href="index.html">Home</a> <a href="Releases.html">Software releases</a> <a href="EHco.html">Mobile releases</a>
-</br>
-</br>
+
+<div class="menu">
+
+	<img class="bckgrdImage" src="Images/bkgrd.png">
+	
+	<div class="question">
+		Why is it that this question is so rare?
+	</div>
+
+	<div class="menuItems">
+		<div class="menuItem" onclick="navigationBar('index.html');"><u>Home</u></div>
+		<div class="menuItem" onclick="navigationBar('Releases.html');"><u>Software Releases</u></div>
+		<div class="menuItem" onclick="navigationBar('EHco.html');"><u>Mobile Releases</u></div>
+	</div>
+	
+	<script>
+		function navigationBar(page)
+		{
+			window.location.href = page;
+		}
+	</script>
+
+</div>
+
 </br>
 Software releases:<br><br>
 

@@ -4,27 +4,29 @@
 <link rel="stylesheet" href="css.css">
 <title>Elliot Harding-🌐 </title>
 
-<div class="center">
-	<b>Why is it that this question is so rare?</b> 
-</div>
-
 <div class="menu">
 
 	<img class="bckgrdImage" src="Images/bkgrd.png">
+	
+	<div class="question">
+		Why is it that this question is so rare?
+	</div>
 
-	<div class="menuItem">
-		<a href="index.html">Home</a>
+	<div class="menuItems">
+		<div class="menuItem" onclick="navigationBar('index.html');"><u>Home</u></div>
+		<div class="menuItem" onclick="navigationBar('Releases.html');"><u>Software Releases</u></div>
+		<div class="menuItem" onclick="navigationBar('EHco.html');"><u>Mobile Releases</u></div>
 	</div>
 	
-	<div class="menuItem">
-		<a href="Releases.html">Software releases</a>
-	</div>
-	
-	<div class="menuItem">
-		<a href="EHco.html">Mobile releases</a>
-	</div>
+	<script>
+		function navigationBar(page)
+		{
+			window.location.href = page;
+		}
+	</script>
 
 </div>
+</br>
 
 It's not right when the sun is dark. <br>
 It's not cold near fire burning bark.<br>
