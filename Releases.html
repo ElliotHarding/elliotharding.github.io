@@ -19,11 +19,88 @@
 
 Software releases:<br><br>
 
-<a href="GitReleases/Logic-Gate-Simulator2020.zip">  Logic-Gate-Simulator-2020</a><br>
-<a href="GitReleases/PaintProgram-4.1.zip">  Paint-Program-4.1</a><br>
-<a href="GitReleases/Rock-Paper-Scissors-1.0.zip">  Rock-Paper-Scissors-1.0</a><br>
+<div id="software-releases-container" class="software-releases-container" onclick="zoom();" onscroll="onScroll();">
+	
+	<div id="softwareItem1" class="softwareItem">
+		<a href="GitReleases/Logic-Gate-Simulator2020.zip">  Logic-Gate-Simulator-2020</a><br>
+	</div>
 
-<br>
+	<div id="softwareItem2" class="softwareItem">
+		<a href="GitReleases/PaintProgram-4.1.zip">  Paint-Program-4.1</a><br>
+	</div>
+	
+	<div id="softwareItem3" class="softwareItem">
+		<a href="GitReleases/Rock-Paper-Scissors-1.0.zip">  Rock-Paper-Scissors-1.0</a><br>
+	</div>
+	
+	<br>
+	<br>
+		<br>
+	<br>
+		<br>
+	<br>
+		<br>
+	<br>
+		<br>
+	<br>
+		<br>
+	<br>
+		<br>
+	<br>	<br>
+	<br>	<br>
+	<br>
+		<br>
+	<br>
+</div>
+
+<script>
+
+var zoom = 1;
+var oldScroll = 10;
+var dontUpdate = false;
+
+function onScroll()
+{
+	if(dontUpdate)
+	{
+		dontUpdate = false;
+		return;
+	}
+
+	let container = document.getElementById("software-releases-container");
+	
+	if(container.scrollTop > oldScroll)
+	{
+		zoom -= 10;
+		dontUpdate = true;
+		container.scrollTop = 10;
+	}
+	else
+	{
+		zoom += 10;
+		container.scrollTop = 10;
+		oldScroll = container.scrollTop;
+	}
+	
+	if(zoom > 1)
+	{
+		let softwareItem = document.getElementById("softwareItem1");
+		softwareItem.style.transform = 'scale(' + zoom + ')';
+		softwareItem.style.transitionDuration = '15ms';
+		let softwareItem1 = document.getElementById("softwareItem2");
+		softwareItem1.style.transform = 'scale(' + zoom + ')';
+		let softwareItem2 = document.getElementById("softwareItem3");
+		softwareItem2.style.transform = 'scale(' + zoom + ')';
+	}
+	
+	
+	
+	
+	
+	
+}
+
+</script>
 
 <div class="iconsContainer">
 
