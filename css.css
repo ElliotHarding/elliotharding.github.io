@@ -2,12 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align:center;
+  text-align: center;
 }
 
 .bckgrdImage {
-	width: 100%;
-	height: 10%;
+  width: 100%;
+  height: 10%;
 }
 
 .menu {
@@ -22,7 +22,7 @@
   left: 16px;
   color: white;
   display: flex;
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", serif;
 }
 
 .menuItem {
@@ -40,29 +40,27 @@
   right: 16px;
   color: white;
   font-size: medium;
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", serif;
 }
 
-.iconsContainer
-{
-	display: flex;
-	justify-content: center;
+.iconsContainer {
+  display: flex;
+  justify-content: center;
 }
 
-.iconContainer
-{
+.iconContainer {
   position: relative;
   width: 30px;
   height: 30px;
 }
 
 .inconsContainerSpacing {
-	 width: 30px;
+  width: 30px;
 }
 
 .iconImage {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .iconHoverText:hover {
