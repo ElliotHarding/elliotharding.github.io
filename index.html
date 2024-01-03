@@ -18,34 +18,54 @@
 	</div>
 </div>
 
-<div class="PoemShit">
-
-You may think this poem to be dull.<br>
-But why don't you have a go?<br>
-Within this fiction a true picture is painted.<br>
-One not quite so dilapidated.<br>
-<br>
-Within this picutre whereever set, <br>
-What you thought of may not have been met <br>
-Images of a fallen tree in a forest or at fireplace at home.<br>
-What is certain, whithin imagination you're not alone.<br>
-
-<br>
-<br>
-
-<p>
-In the heart of a vast, unexplored forest, there existed a paradoxical realm where the laws of nature defied all logic. Cold fire danced amidst the trees, illuminating the forest with an ethereal glow. Silent screams echoed through the air, their source unseen yet undeniably present.<br>
-<br>
-The ephemeral irredecence stood in stark contrast to the squalid conditions of the nearby urban sprawl. Its silence, ethereal essence and vibrant hues a remnant of what was once before, detracted by the cacophony emanating from the mundane city architecture. Perspective allowed for transcendence from the nearby perdurable squalor.<br>
-<br>
-As the dark sun cast its eerie light upon the forest floor, a weightless mass hovered suspended, defying gravity's pull. Its form was ever-changing, shifting from square to circle, from wood to iron, from dry to wet. This enigmatic entity was a paradox in itself, a manifestation of the impossible made possible. The mass wandered aimlessly, its movements leaving no trace upon the ground.<br>
-<br>
-The very air crackled with possible impossibles. The laws of physics were bent and broken, allowing for feats that would be deemed impossible in the mundane world. Objects defied gravity, appearing and disappearing at will. Time seemed to flow in reverse, with events unfolding in an illogical sequence.<br>
-<br>
-And so, the forest existed in a perpetual state of flux, a realm where the impossible was possible and the logical was illogical. It was a place where cold fire burned, silent screams echoed, and living dead roamed. It was a place where the boundaries of reality blurred, and true fiction became the norm.<br>
-<p>
-<br>
-
+<div class="skw-pages">
+  <div class="skw-page skw-page-1 active">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"><img src='' /></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+         	You may think this poem to be dull.<br>
+			But why don't you have a go?<br>
+			Within this fiction a true picture is painted.<br>
+			One not quite so dilapidated.<br>
+			<br>
+			Within this picutre whereever set, <br>
+			What you thought of may not have been met <br>
+			Images of a fallen tree in a forest or at fireplace at home.<br>
+			What is certain, whithin imagination you're not alone.<br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-2">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          	<p>
+			In the heart of a vast, unexplored forest, there existed a paradoxical realm where the laws of nature defied all logic. Cold fire danced amidst the trees, illuminating the forest with an ethereal glow. Silent screams echoed through the air, their source unseen yet undeniably present.<br>
+			<br>
+			The ephemeral irredecence stood in stark contrast to the squalid conditions of the nearby urban sprawl. Its silence, ethereal essence and vibrant hues a remnant of what was once before, detracted by the cacophony emanating from the mundane city architecture. Perspective allowed for transcendence from the nearby perdurable squalor.<br>
+			<br>
+			As the dark sun cast its eerie light upon the forest floor, a weightless mass hovered suspended, defying gravity's pull. Its form was ever-changing, shifting from square to circle, from wood to iron, from dry to wet. This enigmatic entity was a paradox in itself, a manifestation of the impossible made possible. The mass wandered aimlessly, its movements leaving no trace upon the ground.<br>
+			<br>
+			The very air crackled with possible impossibles. The laws of physics were bent and broken, allowing for feats that would be deemed impossible in the mundane world. Objects defied gravity, appearing and disappearing at will. Time seemed to flow in reverse, with events unfolding in an illogical sequence.<br>
+			<br>
+			And so, the forest existed in a perpetual state of flux, a realm where the impossible was possible and the logical was illogical. It was a place where cold fire burned, silent screams echoed, and living dead roamed. It was a place where the boundaries of reality blurred, and true fiction became the norm.<br>
+			<p>
+			<br>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"><img src='' /></div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="pageSpacer"></div>
@@ -104,3 +124,59 @@ And so, the forest existed in a perpetual state of flux, a realm where the impos
 <div class="tagsSection">
 	Elliot C Harding  Elliot-C-Harding  Elliot Harding  elliotcharding  @elliotcharding
 </div>
+
+<script>
+
+$(document).ready(function() {
+
+  var curPage = 1;
+  var numOfPages = $(".skw-page").length;
+  var animTime = 1000;
+  var scrolling = false;
+  var pgPrefix = ".skw-page-";
+
+  function pagination() {
+    scrolling = true;
+
+    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+    $(pgPrefix + (curPage - 1)).addClass("inactive");
+    $(pgPrefix + (curPage + 1)).removeClass("active");
+
+    setTimeout(function() {
+      scrolling = false;
+    }, animTime);
+  };
+
+  function navigateUp() {
+    if (curPage === 1) return;
+    curPage--;
+    pagination();
+  };
+
+  function navigateDown() {
+    if (curPage === numOfPages) return;
+    curPage++;
+    pagination();
+  };
+
+  $(document).on("mousewheel DOMMouseScroll", function(e) {
+    if (scrolling) return;
+    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      navigateUp();
+    } else { 
+      navigateDown();
+    }
+  });
+
+  $(document).on("keydown", function(e) {
+    if (scrolling) return;
+    if (e.which === 38) {
+      navigateUp();
+    } else if (e.which === 40) {
+      navigateDown();
+    }
+  });
+
+});
+
+</script>
