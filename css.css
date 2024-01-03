@@ -1,13 +1,21 @@
-.center {
+.tagsSection {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 5%;
+}
+
+.pageSpacer {
+  height: 2%;
 }
 
 .bckgrdImage {
-  width: 100%;
-  height: 10%;
+ 
+}
+
+.bckgrdImageContainer {
+  height: 15%;
 }
 
 .menu {
@@ -46,6 +54,7 @@
 .iconsContainer {
   display: flex;
   justify-content: center;
+  height: 5%;
 }
 
 .iconContainer {
