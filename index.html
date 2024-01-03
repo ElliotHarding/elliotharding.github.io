@@ -177,6 +177,20 @@ $(document).ready(function() {
     }
   });
 
+  	var updated=0, st;
+	$('body').on({
+	    'touchmove': function(e) { 
+	    st = $(this).scrollTop();
+	    if(st > updated) {
+	        navigateUp();
+	    }
+	    else {
+	        navigateDown();
+	    }
+	    updated = st;
+	    }
+	});
+
 });
 
 </script>
