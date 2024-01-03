@@ -12,7 +12,7 @@ body {
 .skw-pages {
   overflow: hidden;
   position: relative;
-  height: 65%;
+  height: 70%;
 }
 
 .skw-page {
@@ -71,7 +71,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  height: 65%;
+  height: 70%;
   padding: 0 30%;
   color: #fff;
   transform: skewX(18deg);
