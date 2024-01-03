@@ -1,11 +1,13 @@
 <link rel="icon" href="link.png">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="style.css">
 <title>Elliot Harding-🌐 </title>
 
 <div class="menu">
-	<img class="bckgrdImage" src="Images/bkgrd.png">
+	<div class="bckgrdImageContainer"><!--<img class="bckgrdImage" src="Images/bkgrd.png">--></div>
 	<div class="question">
 		Why is it that this question is so rare?
 	</div>
@@ -16,14 +18,40 @@
 	</div>
 </div>
 
-</br>
-<a href="https://play.google.com/store/apps/developer?id=EHco&hl=en&gl=US">EHco apps: </a><br>
-<b>Rememberer</b> <br>
-(Unique exponentail exposure reminding learning app (Also daily customizable tests for learning/remembering)) <br>
-<br>
-Chute-Reader <br>
+<div class="skw-pages">
+  <div class="skw-page skw-page-1 active">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"><img src='' /></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">Rememberer
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading"><a href="https://play.google.com/store/apps/developer?id=EHco&hl=en&gl=US">EHco: Rememberer</a></h2>
+          (Unique exponentail exposure reminding learning app (Also daily customizable tests for learning/remembering))
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-2">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Chute-Reader</h2>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"><img src='' /></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<br>
+<div class="pageSpacer"></div>
+
 <div class="iconsContainer">
 
  <div class="iconContainer" onclick="window.location.href = 'https://www.pinterest.co.uk/ElliotCHarding';">
@@ -74,8 +102,64 @@ Chute-Reader <br>
  
 </div>
 
-<br/>
+<div class="pageSpacer"></div>
 
-<div class="center">
+<div class="tagsSection">
 	Elliot C Harding  Elliot-C-Harding  Elliot Harding  elliotcharding  @elliotcharding
 </div>
+
+<script>
+
+$(document).ready(function() {
+
+  var curPage = 1;
+  var numOfPages = $(".skw-page").length;
+  var animTime = 1000;
+  var scrolling = false;
+  var pgPrefix = ".skw-page-";
+
+  function pagination() {
+    scrolling = true;
+
+    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+    $(pgPrefix + (curPage - 1)).addClass("inactive");
+    $(pgPrefix + (curPage + 1)).removeClass("active");
+
+    setTimeout(function() {
+      scrolling = false;
+    }, animTime);
+  };
+
+  function navigateUp() {
+    if (curPage === 1) return;
+    curPage--;
+    pagination();
+  };
+
+  function navigateDown() {
+    if (curPage === numOfPages) return;
+    curPage++;
+    pagination();
+  };
+
+  $(document).on("mousewheel DOMMouseScroll", function(e) {
+    if (scrolling) return;
+    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      navigateUp();
+    } else { 
+      navigateDown();
+    }
+  });
+
+  $(document).on("keydown", function(e) {
+    if (scrolling) return;
+    if (e.which === 38) {
+      navigateUp();
+    } else if (e.which === 40) {
+      navigateDown();
+    }
+  });
+
+});
+
+</script>
