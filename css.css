@@ -16,6 +16,12 @@
 
 .poemPlaneProcessionPeople {
   text-align: center;
+  width: 100%;
+}
+
+.riveraRadioSecondTime {
+  width: 200%;
+  transform: translate(-25%, 0);
 }
 
 .bckgrdImage {
