@@ -39,6 +39,11 @@
 			What you thought of may not have been met <br>
 			Images of a fallen tree in a forest or at fireplace at home.<br>
 			What is certain, whithin imagination you're not alone.<br>
+
+			</div>
+
+			<div id="dwnBtn" class="trailFearButton">
+				☟
 			</div>
         </div>
       </div>
@@ -48,6 +53,11 @@
     <div class="skw-page__half skw-page__half--left">
       <div class="skw-page__skewed">
         <div class="skw-page__content">
+
+			<div id="upBtn" class="trailFearButtonUp">
+				☝
+			</div>
+
         	<div class="riveraRadioSecondTime">
 			In the heart of a vast, unexplored forest, there existed a paradoxical realm where the laws of nature defied all logic. Cold fire danced amidst the trees, illuminating the forest with an ethereal glow. Silent screams echoed through the air, their source unseen yet undeniably present.<br>
 			<br>
@@ -60,6 +70,7 @@
 			And so, the forest existed in a perpetual state of flux, a realm where the impossible was possible and the logical was illogical. It was a place where cold fire burned, silent screams echoed, and living dead roamed. It was a place where the boundaries of reality blurred, and true fiction became the norm.<br>
 			<br>
 			</div>
+			
         </div>
       </div>
     </div>
@@ -169,6 +180,14 @@ $(document).ready(function() {
     } else { 
       navigateDown();
     }
+  });
+
+  $(document).ready(function() {
+  	$('#dwnBtn').click(navigateDown);
+  });
+
+  $(document).ready(function() {
+  	$('#upBtn').click(navigateUp);
   });
 
   $(document).on("keydown", function(e) {

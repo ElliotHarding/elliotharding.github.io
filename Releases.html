@@ -29,6 +29,9 @@
       <div class="skw-page__skewed">
         <div class="skw-page__content">
           <h2 class="skw-page__heading"><a href="GitReleases/Logic-Gate-Simulator2020.zip">Logic-Gate-Simulator-2020</a></h2>
+          <div id="dwnBtn" class="trailFearButton">
+				☟
+			</div>
         </div>
       </div>
     </div>
@@ -37,7 +40,13 @@
     <div class="skw-page__half skw-page__half--left">
       <div class="skw-page__skewed">
         <div class="skw-page__content">
-          <h2 class="skw-page__heading"><a href="GitReleases/PaintProgram-4.1.zip">Paint-Program-4.1</a></h2>
+	    	<div id="upBtn" class="trailFearButtonUp">
+				☝
+			</div>
+          <div><h2 class="skw-page__heading"><a href="GitReleases/PaintProgram-4.1.zip">Paint-Program-4.1</a></h2></div>
+          <div id="dwnBtn2" class="trailFearButton">
+				☟
+			</div>
         </div>
       </div>
     </div>
@@ -56,7 +65,10 @@
     <div class="skw-page__half skw-page__half--right">
       <div class="skw-page__skewed">
         <div class="skw-page__content">
-          <h2 class="skw-page__heading"><a href="GitReleases/Rock-Paper-Scissors-1.0.zip">Rock-Paper-Scissors-1.0</a></h2>
+        	<div id="upBtn2" class="trailFearButtonUp">
+				☝
+			</div>
+          <div><h2 class="skw-page__heading"><a href="GitReleases/Rock-Paper-Scissors-1.0.zip">Rock-Paper-Scissors-1.0</a></h2></div>
         </div>
       </div>
     </div>
@@ -172,6 +184,21 @@ $(document).ready(function() {
     } else if (e.which === 40) {
       navigateDown();
     }
+  });
+
+   $(document).ready(function() {
+  	$('#dwnBtn').click(navigateDown);
+  });
+
+   $(document).ready(function() {
+  	$('#dwnBtn2').click(navigateDown);
+  });
+
+  $(document).ready(function() {
+  	$('#upBtn').click(navigateUp);
+  });
+  $(document).ready(function() {
+  	$('#upBtn2').click(navigateUp);
   });
 
 });

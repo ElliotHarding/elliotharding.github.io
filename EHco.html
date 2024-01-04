@@ -31,8 +31,16 @@
           <div class="poemPlaneProcessionPeople">
           <h2 class="skw-page__heading"><a href="https://play.google.com/store/apps/developer?id=EHco&hl=en&gl=US">EHco: Rememberer</a></h2>
           (Unique exponentail exposure reminding learning app (Also daily customizable tests for learning/remembering))
+
           </div>
+
+          <div id="dwnBtn" class="trailFearButton">
+            ☟
+          </div>
+
         </div>
+
+
       </div>
     </div>
   </div>
@@ -40,6 +48,10 @@
     <div class="skw-page__half skw-page__half--left">
       <div class="skw-page__skewed">
         <div class="skw-page__content">
+          <div id="upBtn" class="trailFearButtonUp">
+            ☝
+          </div>
+
           <h2 class="skw-page__heading">Chute-Reader</h2>
         </div>
       </div>
@@ -160,6 +172,14 @@ $(document).ready(function() {
     } else if (e.which === 40) {
       navigateDown();
     }
+  });
+
+   $(document).ready(function() {
+    $('#dwnBtn').click(navigateDown);
+  });
+
+  $(document).ready(function() {
+    $('#upBtn').click(navigateUp);
   });
 
 });
