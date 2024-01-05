@@ -1,3 +1,22 @@
+.menuSection {
+  position: relative;
+  text-align: center;
+  height: 15%;
+}
+
+.pagesSection {
+  overflow: hidden;
+  position: relative;
+  height: 72%;
+  width: 100%;
+}
+
+.iconsSection {
+  display: flex;
+  justify-content: center;
+  height: 3%;
+}
+
 .tagsSection {
   display: flex;
   justify-content: center;
@@ -9,6 +28,8 @@
 .pageSpacer {
   height: 2%;
 }
+
+
 
 .PoemShit {
   background-color: white;
@@ -54,19 +75,6 @@
   color: red;
 }
 
-.bckgrdImage {
- 
-}
-
-.bckgrdImageContainer {
-  height: 15%;
-}
-
-.menu {
-  position: relative;
-  text-align: center;
-}
-
 .menuItems {
   position: absolute;
   bottom: 50%;
@@ -93,12 +101,6 @@
   color: white;
   font-size: medium;
   font-family: "Times New Roman", serif;
-}
-
-.iconsContainer {
-  display: flex;
-  justify-content: center;
-  height: 3%;
 }
 
 .iconContainer {
