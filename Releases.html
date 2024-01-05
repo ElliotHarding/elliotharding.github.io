@@ -46,7 +46,7 @@
 
 	        <div class="poemPlaneProcessionPeople"><a href="GitReleases/PaintProgram-4.1.zip">Paint-Program-4.1</a></div>
 
-			<div id="dwnBtn" class="trailFearButtonDwn">
+			<div id="dwnBtn2" class="trailFearButtonDwn">
 				☟
 			</div>
 	    </div>
@@ -58,7 +58,7 @@
     <div id="skirtPage3" class="skirtPage">
 	    <div class="skirtPage__half skirtPage__half--left">
 
-	    	<div id="upBtn" class="trailFearButtonUp">
+	    	<div id="upBtn2" class="trailFearButtonUp">
 				☝
 			</div>
 
@@ -179,6 +179,14 @@ $(document).ready(function() {
 
   $(document).ready(function() {
   	$('#upBtn').click(navigateUp);
+  });
+
+  $(document).ready(function() {
+  	$('#dwnBtn2').click(navigateDown);
+  });
+
+  $(document).ready(function() {
+  	$('#upBtn2').click(navigateUp);
   });
 
   $(document).on("keydown", function(e) {
