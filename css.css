@@ -18,13 +18,20 @@
   text-align: center;
   width: 200%;
   transform: translate(-25%, 0);
-  font-size: 80%;
+  font-size: 1em;
 }
 
 .riveraRadioSecondTime {
   width: 200%;
-  transform: translate(-25%, 0);
-  font-size: 80%;
+  height: 100%;
+  transform: translate(-25%, 25%);
+  font-size: 1em;
+}
+
+.pageImg {
+  object-fit: contain;
+  position: absolute;
+  transform: translate(0%, -25%);
 }
 
 .trailFearButton
