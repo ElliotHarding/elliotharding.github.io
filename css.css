@@ -6,9 +6,15 @@
 
 .pagesSection {
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: 15%;
   height: 72%;
   width: 100%;
+}
+
+.cleanSection {
+  position: absolute;
+  top: 87%;
 }
 
 .iconsSection {
@@ -36,43 +42,25 @@
 }
 
 .poemPlaneProcessionPeople {
+  position: absolute;
+  transform: translate(10%, 0%);
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  width: 200%;
-  transform: translate(-25%, 0);
-  font-size: 1em;
 }
 
 .riveraRadioSecondTime {
-  width: 200%;
-  height: 100%;
-  transform: translate(-25%, 25%);
-  font-size: 1em;
-}
-
-.pageImg {
-  object-fit: contain;
   position: absolute;
-  transform: translate(0%, -25%);
-}
-
-.trailFearButton
-{
-  position: absolute;
-  width: 20%;
-  height: 20%;
-  transform: translate(200%, 200%);
-  font-size: 250%;
-  color: red;
-}
-
-.trailFearButtonUp  
-{
-  position: absolute;
-  width: 20%;
-  height: 20%;  
-  transform: translate(-180%, -180%);
-  font-size: 250%;
-  color: red;
+  transform: translate(10%, 0%);
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .menuItems {
