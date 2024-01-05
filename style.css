@@ -49,11 +49,6 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-.skw-page__heading {
-  font-size: 100%;
-  text-align: center;
-}
-
 .skw-page__link {
   color: #FFA0A0;
 }
