@@ -4,30 +4,44 @@ $(document).ready(function() {
   var numOfPages = $(".skirtPage").length;
   var animTime = 1000;
   var scrolling = false;
-  var pgPrefix = "#skirtPage";
+  var pgPrefix = ".skirtPage";
 
-  function pagination() {
+  function traditionTransition() 
+  {
     scrolling = true;
 
-    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
-    $(pgPrefix + (curPage - 1)).addClass("inactive");
-    $(pgPrefix + (curPage + 1)).removeClass("active");
+    for (var i = 1; i >= numOfPages; i++)
+    {
+      if(i == curPage)
+      {
+        print();
+        $(pgPrefix + i).removeClass("inactive").addClass("active");
+        $(pgPrefix + i).children('div')[0].hide()
+        $(pgPrefix + i).children('div')[1].hide()
+      }
+      else
+      {
+        $(pgPrefix + i).removeClass("active").addClass("inactive");
+        $(pgPrefix + i).children('div')[0].hide()
+        $(pgPrefix + i).children('div')[1].hide()
+      }
+    }
 
     setTimeout(function() {
       scrolling = false;
     }, animTime);
-  };
+  }
 
   function navigateUp() {
     if (curPage === 1) return;
     curPage--;
-    pagination();
+    traditionTransition();
   };
 
   function navigateDown() {
-    if (curPage === numOfPages) return;
+    //if (curPage === numOfPages) return;
     curPage++;
-    pagination();
+    traditionTransition();
   };
 
   $(document).on("mousewheel DOMMouseScroll", function(e) {
