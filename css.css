@@ -2,6 +2,7 @@
   position: relative;
   text-align: center;
   height: 15%;
+  width: 100%;
 }
 
 .pagesSection {
@@ -14,21 +15,31 @@
 
 .cleanSection {
   position: absolute;
-  top: 87%;
+  top: 90%;
+  width: 100%;
+  height: 10%;
 }
 
 .iconsSection {
-  display: flex;
-  justify-content: center;
-  height: 3%;
-}
-
-.tagsSection {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  top: 15%;
   height: 3%;
+  width: 100%;
+}
+
+.tagsSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 50%;
+  height: 3%;
+  width: 100%;
 }
 
 .pageSpacer {

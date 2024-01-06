@@ -14,6 +14,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
+  height: 72%;
   background: #292929;
 }
 
@@ -21,27 +22,27 @@ body {
   position: absolute;
   top: 0;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   transition: transform 1s;
   background: #292929;
+  overflow: hidden;
 
   font-size: 1em;
 }
 
 .skirtPageImg {
   object-fit: contain;
-  transform: translateY(-15%); 
 }
 
 .skirtPage__half--left {
   left: 0;
-  transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 150%, 0);
   background: #292929;
 }
 
 .skirtPage__half--right {
   left: 50%;
-  transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -150%, 0);
   background: #292929;
 }
 
@@ -56,8 +57,8 @@ body {
 .trailFearButtonDwn
 {
   position: absolute;
-  top: 65%;
-  left: 90%;
+  right: 3%;
+  bottom: 40%;  
   font-size: 4em;
   color: red;
 }
