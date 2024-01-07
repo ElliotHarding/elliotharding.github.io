@@ -36,7 +36,7 @@ $(document).ready(function() {
   };
 
   function navigateDown() {
-    if (curPage === numOfPages) return;
+    if (curPage === numOfPages-1) return;
     curPage++;
     traditionTransition();
   };
