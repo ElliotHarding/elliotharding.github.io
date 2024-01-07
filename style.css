@@ -27,6 +27,7 @@ body {
   overflow: hidden;
   font-size: 1em;
   background: #292929;
+  display: block;
 }
 
 .right {

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var curPage = 1;
+  var curPage = 0;
   var numOfPages = $(".skirtPage").length;
   var animTime = 1000;
   var scrolling = false;
@@ -10,20 +10,17 @@ $(document).ready(function() {
   {
     scrolling = true;
 
-    for (var i = 1; i >= numOfPages; i++)
+    for (var i = 0; i < numOfPages; i++)
     {
       if(i == curPage)
       {
-        print();
-        $(pgPrefix + i).removeClass("inactive").addClass("active");
-        $(pgPrefix + i).children('div')[0].hide()
-        $(pgPrefix + i).children('div')[1].hide()
+        $(pgPrefix).eq(i).children().eq(0).animate({top: '0%'});
+        $(pgPrefix).eq(i).children().eq(1).animate({top: '0%'});
       }
       else
       {
-        $(pgPrefix + i).removeClass("active").addClass("inactive");
-        $(pgPrefix + i).children('div')[0].hide()
-        $(pgPrefix + i).children('div')[1].hide()
+        $(pgPrefix).eq(i).children().eq(0).animate({top: '100%'});
+        $(pgPrefix).eq(i).children().eq(1).animate({top: '-100%'});
       }
     }
 
@@ -33,13 +30,13 @@ $(document).ready(function() {
   }
 
   function navigateUp() {
-    if (curPage === 1) return;
+    if (curPage === 0) return;
     curPage--;
     traditionTransition();
   };
 
   function navigateDown() {
-    //if (curPage === numOfPages) return;
+    if (curPage === numOfPages) return;
     curPage++;
     traditionTransition();
   };
