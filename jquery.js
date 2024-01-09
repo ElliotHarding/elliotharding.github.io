@@ -6,6 +6,16 @@ $(document).ready(function() {
   var scrolling = false;
   var pgPrefix = ".skirtPage";
 
+  $(pgPrefix).eq(0).children().eq(0).animate({top: '0%'});
+  $(pgPrefix).eq(0).children().eq(1).animate({top: '0%'});
+  $(pgPrefix).eq(0).show();
+  for (var i = 1; i < numOfPages; i++)
+  {
+    $(pgPrefix).eq(i).children().eq(0).animate({top: '100%'});
+    $(pgPrefix).eq(i).children().eq(1).animate({top: '-100%'});
+    $(pgPrefix).eq(i).hide();
+  }
+
   function traditionTransition() 
   {
     scrolling = true;
@@ -16,11 +26,13 @@ $(document).ready(function() {
       {
         $(pgPrefix).eq(i).children().eq(0).animate({top: '0%'});
         $(pgPrefix).eq(i).children().eq(1).animate({top: '0%'});
+        $(pgPrefix).eq(i).show();
       }
       else
       {
         $(pgPrefix).eq(i).children().eq(0).animate({top: '100%'});
         $(pgPrefix).eq(i).children().eq(1).animate({top: '-100%'});
+        $(pgPrefix).eq(i).hide();
       }
     }
 
