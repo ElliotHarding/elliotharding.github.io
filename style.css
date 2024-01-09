@@ -36,24 +36,23 @@ body {
 }
 
 .skirtPageImg {
-  /*object-fit: contain;
-  position: relative;*/
-  display: inline-block;
-  vertical-align: middle
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  /*object-fit: contain;*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 @media (orientation: landscape) {
   .skirtPageImg {
-    
+     margin: auto;
   }
 }
 
 @media (orientation: portrait) {
   .skirtPageImg {
-    
+    min-height: 100%;
+    left: 25%;
+    max-height: 100%;
   }
 }
 
