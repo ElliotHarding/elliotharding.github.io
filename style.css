@@ -51,8 +51,8 @@ body {
 @media (orientation: portrait) {
   .skirtPageImg {
     min-height: 100%;
-    left: 25%;
     max-height: 100%;
+    margin: auto;
   }
 }
 
