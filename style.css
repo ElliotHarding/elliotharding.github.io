@@ -36,14 +36,32 @@ body {
 }
 
 .skirtPageImg {
-  object-fit: contain;
+  /*object-fit: contain;
+  position: relative;*/
+  display: inline-block;
+  vertical-align: middle
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (orientation: landscape) {
+  .skirtPageImg {
+    
+  }
+}
+
+@media (orientation: portrait) {
+  .skirtPageImg {
+    
+  }
 }
 
 .trailFearButtonDwn
 {
   position: absolute;
   right: 3%;
-  bottom: 40%;  
+  bottom: 3%;  
   font-size: 4em;
   color: red;
 }
