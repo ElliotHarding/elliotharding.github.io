@@ -26,9 +26,10 @@ body {
   background: #292929;
   overflow: hidden;
   font-size: 1em;
-  color: black;
+  color: white;
   background: #292929;
   display: block;
+  font-family: "Times New Roman", serif;
 }
 
 .right {
@@ -46,6 +47,10 @@ body {
   .skirtPageImg {
      margin: auto;
   }
+
+  .skirtPage__half {
+    font-size: 1em;
+  }
 }
 
 @media (orientation: portrait) {
@@ -53,6 +58,10 @@ body {
     min-height: 100%;
     max-height: 100%;
     margin: auto;
+  }
+
+  .skirtPage__half {
+    font-size: 0.5em;
   }
 }
 
