@@ -70,8 +70,6 @@ body {
   position: absolute;
   right: 3%;
   bottom: 3%;  
-  font-size: 4em;
-  color: red;
 }
 
 .trailFearButtonUp  
@@ -79,8 +77,17 @@ body {
   position: absolute;
   top: 3%;
   left: 3%;
-  font-size: 4em;
-  color: red;
+}
+
+.arrowImageUp {
+  width: 10%;
+  height: 10%;
+  transform: rotate(180deg);
+}
+
+.arrowImageDwn {
+  width: 10%;
+  height: 10%;
 }
 
 
