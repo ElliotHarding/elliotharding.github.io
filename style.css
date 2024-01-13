@@ -80,14 +80,15 @@ body {
 }
 
 .arrowImageUp {
-  width: 10%;
-  height: 10%;
+  width: 20%;
+  height: 20%;
   transform: rotate(180deg);
 }
 
 .arrowImageDwn {
-  width: 10%;
-  height: 10%;
+  width: 20%;
+  height: 20%;
+  transform: translate(400%, 0);
 }
 
 
