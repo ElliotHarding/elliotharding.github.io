@@ -73,6 +73,14 @@
   text-align: left;
 }
 
+.iX {
+  position: absolute;
+  transform: translate(10%, 10%);
+  height: 80%;
+  width: 80%;
+  text-align: left;
+}
+
 .menuItems {
   position: absolute;
   bottom: 50%;
