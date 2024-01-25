@@ -65,6 +65,9 @@ body {
   }
 }
 
+
+@media (orientation: landscape) {
+
 .trailFearButtonDwn
 {
   position: absolute;
@@ -80,8 +83,6 @@ body {
 }
 
 
-
-@media (orientation: landscape) {
 .arrowImageUp {
   width: 5%;
   height: 5%;
@@ -95,14 +96,30 @@ body {
 }
 
 @media (orientation: portrait) {
+
+.trailFearButtonDwn
+{
+  position: absolute;
+  right: -7%;
+  bottom: 0%;  
+  width: 7%;
+  height: 7%;
+}
+
+.trailFearButtonUp  
+{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 7%;
+  height: 7%;
+}
+
+
 .arrowImageUp {
-  width: 15%;
-  height: 15%;
 }
 
 .arrowImageDwn {
-  width: 15%;
-  height: 15%;
   transform: translate(1700%, 0) rotate(180deg);
 }
 }
