@@ -79,6 +79,9 @@ body {
   left: 0%;
 }
 
+
+
+@media (orientation: landscape) {
 .arrowImageUp {
   width: 5%;
   height: 5%;
@@ -88,6 +91,20 @@ body {
   width: 5%;
   height: 5%;
   transform: translate(1800%, 0) rotate(180deg);
+}
+}
+
+@media (orientation: portrait) {
+.arrowImageUp {
+  width: 15%;
+  height: 15%;
+}
+
+.arrowImageDwn {
+  width: 15%;
+  height: 15%;
+  transform: translate(1700%, 0) rotate(180deg);
+}
 }
 
 
