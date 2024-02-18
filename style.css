@@ -100,10 +100,8 @@ body {
 .trailFearButtonDwn
 {
   position: absolute;
-  right: -7%;
-  bottom: 0%;  
-  width: 7%;
-  height: 7%;
+  right: 14%;
+  bottom: 7%;
 }
 
 .trailFearButtonUp  
@@ -111,18 +109,20 @@ body {
   position: absolute;
   top: 0%;
   left: 0%;
-  width: 7%;
-  height: 7%;
 }
 
 
 .arrowImageUp {
+  width: 14%;
+  height: 14%;
 }
 
 .arrowImageDwn {
-  transform: translate(1700%, 0) rotate(180deg);
+  width: 14%;
+  height: 14%;
+  transform: translate(700%, 0) rotate(180deg);
 }
 }
 
-
+/*
 /*# sourceMappingURL=style.css.map */
